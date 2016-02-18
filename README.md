@@ -10,11 +10,11 @@ can start development on this project.
 
 Thing(s) to download: 
 ---
-Node.js : *[Link](nodejs.org)
+Node.js : [Node.js](nodejs.org)
 
 For Window users: 
 ---
-Git Bash: *[Link](git-scm.com/downloads)
+Git Bash: [Git Bash](git-scm.com/downloads)
 
 Once you have Node.js installed on your workstation, Open terminal 
 or Git Bash and run the command " npm install -g cordova ionic ".
