@@ -16,5 +16,4 @@ For Window users:
 ---
 Git Bash: [Git Bash](http://git-scm.com/downloads)
 
-Once you have Node.js installed on your workstation, Open terminal 
-or Git Bash and run the command ``` npm install -g cordova ionic ``` .
+Once you have Node.js installed on your workstation. /nOpen terminal or Git Bash and run the command ``` npm install -g cordova ionic ``` .
