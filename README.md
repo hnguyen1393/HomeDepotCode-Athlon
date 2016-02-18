@@ -24,3 +24,14 @@ $ npm install -g cordova ionic
 ``` 
 
 This will install both cordova and ionic onto your workstation globally.
+
+**Some useful stuff**
+
+If you don't want to keep entering username and password after every push.
+
+```
+$ git config credential.helper store
+$ git push http://example.com/repo.git
+username: <type your username>
+Password: <type your password>
+```
