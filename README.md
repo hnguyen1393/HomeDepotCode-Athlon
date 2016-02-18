@@ -3,7 +3,7 @@ Code_Athlon for Home Depot
 
 This repository will contain the project for the team's 24 hour coding challenge sponsored by Home Depot for GSU students.
 
-**Team members:** `Lawrence Tsao, Alex Shyu, Chin Pyon, Henry Nguyen`
+**Team members:** `Lawrence Tsao | Alex Shyu | Chin Pyon | Henry Nguyen`
 
 This is a Node based application so a few things will be needed before you 
 can start development on this project.
