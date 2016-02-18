@@ -10,7 +10,8 @@ can start development on this project.
 
 Thing(s) to download: 
 ---
-Node.js : [Node.js](http://nodejs.org)
+**Node.js:** [Node.js](http://nodejs.org)
+**PhoneGap:** Install this for your Andriod or iOS device
 
 For Window users: 
 ---
