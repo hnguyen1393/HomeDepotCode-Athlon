@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/myApp/www/js/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myApp/www/js/controllers.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myApp/www/js/services.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myApp/www/templates/login.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myApp/www/templates/loginPage.html" charset="UTF-8" />
   </component>

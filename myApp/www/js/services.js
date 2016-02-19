@@ -83,7 +83,7 @@ angular.module('starter.services', [])
     id: 16,
     name: 'Mykee Labs',
     proSpend: '$1,830,332.54',
-    trade: 'Electrician' 
+    trade: 'Electrician'
   }, {
     id: 17,
     name: 'ibiba',
@@ -258,7 +258,7 @@ angular.module('starter.services', [])
 
   return {
     all: function() {
-      return chats;
+      return pros;
     },
     remove: function(chat) {
       chats.splice(chats.indexOf(chat), 1);
