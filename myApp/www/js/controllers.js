@@ -22,7 +22,13 @@ angular.module('starter.controllers', ['ngCordova'])
 })
 
 .controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-});
+    $scope.settings = {
+      enableFriends: true
+    };
+
+  })
+.controller('dbController', function ($scope, $cordovaSQLite) {
+
+  });
+
+
