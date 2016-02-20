@@ -1,5 +1,24 @@
 angular.module('starter.controllers', ['ngCordova'])
 
+.controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
+
+  // Called to navigate to the main app
+  $scope.startApp = function() {
+    $state.go('main');
+  };
+  $scope.next = function() {
+    $ionicSlideBoxDelegate.next();
+  };
+  $scope.previous = function() {
+    $ionicSlideBoxDelegate.previous();
+  };
+
+  // Called each time the slide changes
+  $scope.slideChanged = function(index) {
+    $scope.slideIndex = index;
+  };
+})
+
 .controller('DashCtrl', function($scope) {})
 
   .controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
@@ -40,6 +59,8 @@ angular.module('starter.controllers', ['ngCordova'])
     Chats.remove(chat);
   };
 })
+
+
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);

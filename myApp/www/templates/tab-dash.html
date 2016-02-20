@@ -1,16 +1,43 @@
-<ion-view view-title="Dashboard">
+<ion-view view-title="Home Depot">
+
   <ion-content class="padding">
-    <h2>LOGIN</h2>
-    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+    <h2>Welcome</h2>
+
+    <ion-slide-box on-slide-changed="slideChanged(index)">
       <ion-slide>
-        <div class="box blue"><button ng-click="nextSlide()">Next slide!</button></div>
+        <h3>Thank you for choosing the Awesome App!</h3>
+        <div id="logo">
+          <img src="http://code.ionicframework.com/assets/img/app_icon.png">
+        </div>
+        <p>
+          We've worked super hard to make you happy.
+        </p>
+        <p>
+          But if you are angry, too bad.
+        </p>
       </ion-slide>
       <ion-slide>
-        <div class="box yellow"><h1>YELLOW</h1></div>
+        <h3>Using Awesome</h3>
+
+        <div id="list">
+          <h5>Just three steps:</h5>
+          <ol>
+            <li>Be awesome</li>
+            <li>Stay awesome</li>
+            <li>There is no step 3</li>
+          </ol>
+        </div>
       </ion-slide>
       <ion-slide>
-        <div class="box pink"><h1>PINK</h1></div>
+        <h3>Any questions?</h3>
+        <p>
+          Too bad!
+        </p>
       </ion-slide>
     </ion-slide-box>
+
+
+
+
   </ion-content>
 </ion-view>

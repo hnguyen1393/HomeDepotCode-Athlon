@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/myApp/www/css/style.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myApp/www/js/app.js" charset="UTF-8" />
-<<<<<<< HEAD
     <file url="file://$PROJECT_DIR$/myApp/www/js/controllers.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myApp/www/js/services.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/myApp/www/templates/chat-detail.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/myApp/www/templates/login.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/myApp/www/templates/loginPage.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/myApp/www/templates/tab-chats.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/myApp/www/templates/tabs.html" charset="UTF-8" />
-=======
     <file url="PROJECT" charset="UTF-8" />
->>>>>>> 21667013141bd247280e2f37515266e7dafbb4d0
   </component>
 </project>
