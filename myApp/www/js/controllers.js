@@ -19,13 +19,17 @@ angular.module('starter.controllers', ['ngCordova'])
   };
 })
 
-.controller('DashCtrl', function($scope, $ionicPopup, $state) {
+.controller('DashCtrl', function($scope, $ionicPopup, $state, $timeout) {
 
 // When button is clicked, the popup will be shown...
 
   $scope.showConfirm = function() {
     $state.go('proaccount');
+
+
+
     var confirmPopup = $ionicPopup.confirm({
+
       title: 'Pro Decision',
       template: 'Would you like to assist?'
 
@@ -77,6 +81,7 @@ angular.module('starter.controllers', ['ngCordova'])
   //});
 
   $scope.chats = Chats.all();
+  $scope.trades = Chats.trades();
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
