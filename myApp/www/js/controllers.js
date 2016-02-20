@@ -19,7 +19,7 @@ angular.module('starter.controllers', ['ngCordova'])
   };
 })
 
-.controller('DashCtrl', function($scope, $ionicPopup, $state, $timeout) {
+.controller('DashCtrl', function($scope, $ionicPopup, $state) {
 
 // When button is clicked, the popup will be shown...
 
@@ -83,7 +83,6 @@ angular.module('starter.controllers', ['ngCordova'])
   //});
 
   $scope.chats = Chats.all();
-  $scope.trades = Chats.trades();
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
