@@ -47,11 +47,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       controller: 'LoginCtrl'
     })
 
-    .state('proaccount',{
-      url: '/proaccount',
-      templateUrl: 'templates/proaccount.html',
-      controller: 'DashCtrl'
-    })
+
+
 
     .state('tab', {
     url: '/tab',
@@ -60,6 +57,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   })
 
   // Each tab has its own nav history stack:
+    .state('proaccount',{
+      url: '/proaccount',
+      templateUrl: 'templates/proaccount.html',
+      controller: 'DashCtrl'
+    })
+    
 
   .state('tab.dash', {
     url: '/dash',

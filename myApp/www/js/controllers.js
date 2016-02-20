@@ -19,7 +19,7 @@ angular.module('starter.controllers', ['ngCordova'])
   };
 })
 
-.controller('DashCtrl', function($scope, $ionicPopup, $state) {
+.controller('DashCtrl', function($scope, $ionicPopup, $state, $timeout) {
 
 // When button is clicked, the popup will be shown...
 
