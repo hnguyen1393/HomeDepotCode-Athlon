@@ -18,6 +18,14 @@ angular.module('starter.controllers', ['ngCordova'])
 
   })
 
+.controller('menusCtrl', function($scope, $stateParams, $ionicSlideBoxDelegate){
+
+    $scope.nextSlide = function() {
+      $ionicSlideBoxDelegate.next();
+    }
+
+  })
+
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
