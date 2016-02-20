@@ -2,21 +2,19 @@
 <ion-pane>
   <ion-content class="has-header padding=true">
 
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-      <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0;  user-scalable=0;" name="viewport">
-      <link rel="stylesheet" href="../includes/style.css">
-    </head>
+
 
     <h2 align="center">Top Pros for Home Depot</h2>
 
-    <body width = "device-width">
+    <button class = "button" ng-click = "showConfirm()">Add Popup Confirm</button>
+
+
+
     <ion-slide-box on-slide-changed="slideChanged(index)">
       <ion-slide>
         <h3 align="center" ><font color="red">Plumber</font></h3>
         <div class="container-fluid" id="plumb">
           <center><img class="test" align="center" src="http://www.sanjoseplumbingpro.com/media/images/cartoonplumber-350.png"></center>
-          <center><button type="button" onclick="alert('{{chat.trade}}')">Accept</button></center>
         </div>
         <br>
         <br>
@@ -26,7 +24,6 @@
         <h3 align="center" ><font color="orange">Electrician</font></h3>
         <div class="container-fluid" id="elect">
             <center><img class="test" align="center" src="http://zen7method.com/neuxgen/electrician-man.png"></center>
-          <center><button type="button" onclick="alert('{{chat.trade}}')">Accept</button></center>
         </div>
       </ion-slide>
 
@@ -34,11 +31,11 @@
         <h3 align="center" ><font color="blue">Home Improvement</font></h3>
         <div class="container-fluid" id="homeImp">
             <center><img class="test" align="center" src="https://westbaycash.com/w2/img/uses/improve.png"></center>
-          <center><button type="button" onclick="alert('{{chat.trade}}')">Accept</button></center>
         </div>
       </ion-slide>
     </ion-slide-box>
 </body>
+
 
 
   </ion-content>

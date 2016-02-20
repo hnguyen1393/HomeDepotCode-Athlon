@@ -19,12 +19,34 @@ angular.module('starter.controllers', ['ngCordova'])
   };
 })
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, $ionicPopup, $state) {
+
+// When button is clicked, the popup will be shown...
+
+  $scope.showConfirm = function() {
+    $state.go('proaccount');
+    var confirmPopup = $ionicPopup.confirm({
+      title: 'Pro Decision',
+      template: 'Would you like to assist?'
+
+    });
+
+    confirmPopup.then(function(res) {
+      if (res) {
+        $state.go('proaccount');
+        console.log('Sure!');
+      } else {
+        console.log('Not sure!');
+      }
+    });
+    };
+})
 
   .controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
     $scope.data = {};
 
     $scope.login = function() {
+
       LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
         $state.go('tab.dash');
       }).error(function(data) {
@@ -33,6 +55,14 @@ angular.module('starter.controllers', ['ngCordova'])
           template: 'Please check your credentials!'
         });
       });
+    }
+
+  })
+
+.controller('menusCtrl', function($scope, $stateParams, $ionicSlideBoxDelegate){
+
+    $scope.nextSlide = function() {
+      $ionicSlideBoxDelegate.next();
     }
 
   })
@@ -65,7 +95,8 @@ angular.module('starter.controllers', ['ngCordova'])
 
   })
 .controller('dbController', function ($scope, $cordovaSQLite) {
-
   });
+
+
 
 

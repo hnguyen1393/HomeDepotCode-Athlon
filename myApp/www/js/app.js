@@ -5,11 +5,11 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-var db = null;
+
 
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngCordova'])
 
-.run(function($ionicPlatform, $cordovaSQLite) {
+.run(function($ionicPlatform, $cordovaSQLite, $rootScope) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -22,7 +22,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-    db = $cordovaSQLite.openDB("my.db");
+
+    $rootScope.db = $cordovaSQLite.openDB({name: "my.db"});
     $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS people(id integer primary key, username text, password text)");
     $cordovaSQLite.execute(db, "INSERT INTO people(id, username, password) VALUES (1, 'henry', 'henry')");
     $cordovaSQLite.execute(db, "INSERT INTO people(id, username, password) VALUES (2, 'lawrence', 'lawrence')");
@@ -44,6 +45,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       url: '/login',
       templateUrl: 'templates/login.html',
       controller: 'LoginCtrl'
+    })
+
+    .state('proaccount',{
+      url: '/proaccount',
+      templateUrl: 'templates/proaccount.html',
+      controller: 'DashCtrl'
     })
 
     .state('tab', {
