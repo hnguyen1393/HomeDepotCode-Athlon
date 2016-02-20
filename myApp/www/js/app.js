@@ -47,6 +47,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       controller: 'LoginCtrl'
     })
 
+    .state('proaccount',{
+      url: '/proaccount',
+      templateUrl: 'templates/proaccount.html',
+      controller: 'DashCtrl'
+    })
+
     .state('tab', {
     url: '/tab',
     abstract: true,

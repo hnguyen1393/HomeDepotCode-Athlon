@@ -19,7 +19,28 @@ angular.module('starter.controllers', ['ngCordova'])
   };
 })
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, $ionicPopup, $state) {
+
+// When button is clicked, the popup will be shown...
+
+  $scope.showConfirm = function() {
+    $state.go('proaccount');
+    var confirmPopup = $ionicPopup.confirm({
+      title: 'Pro Decision',
+      template: 'Would you like to assist?'
+
+    });
+
+    confirmPopup.then(function(res) {
+      if (res) {
+        $state.go('proaccount');
+        console.log('Sure!');
+      } else {
+        console.log('Not sure!');
+      }
+    });
+    };
+})
 
   .controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
     $scope.data = {};
@@ -74,7 +95,8 @@ angular.module('starter.controllers', ['ngCordova'])
 
   })
 .controller('dbController', function ($scope, $cordovaSQLite) {
-
   });
+
+
 
 
