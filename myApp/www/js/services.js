@@ -290,12 +290,12 @@ angular.module('starter.services', [])
       return pros;
     },
     remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
+      pros.splice(pros.indexOf(chat), 1);
     },
     get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+      for (var i = 0; i < pros.length; i++) {
+        if (pros[i].id === parseInt(chatId)) {
+          return pros[i];
         }
       }
       return null;
