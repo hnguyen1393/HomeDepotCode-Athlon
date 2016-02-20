@@ -23,7 +23,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       StatusBar.styleDefault();
     }
     db = $cordovaSQLite.openDB("my.db");
-    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS people(id integer primary key, firstname text, lasatname text)");
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS people(id integer primary key, username text, password text)");
+    $cordovaSQLite.execute(db, "INSERT INTO people(id, username, password) VALUES (1, 'henry', 'henry')");
+    $cordovaSQLite.execute(db, "INSERT INTO people(id, username, password) VALUES (2, 'lawrence', 'lawrence')");
+    $cordovaSQLite.execute(db, "INSERT INTO people(id, username, password) VALUES (3, 'chin', 'chin')");
+    $cordovaSQLite.execute(db, "INSERT INTO people(id, username, password) VALUES (4, 'alex', 'alex')");
   });
 })
 
@@ -38,7 +42,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   // setup an abstract state for the tabs directive
     .state('login', {
       url: '/login',
-      templateUrl: 'templates/login.html'
+      templateUrl: 'templates/login.html',
+      controller: 'LoginCtrl'
     })
 
     .state('tab', {
@@ -89,6 +94,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/login');
 
 });

@@ -1,5 +1,34 @@
 angular.module('starter.services', [])
 
+  .service('LoginService', function($q, $cordovaSQLite) {
+    return {
+      loginUser: function(name, pw) {
+        var deferred = $q.defer();
+        var promise = deferred.promise;
+        var query = ""
+
+        if (name == 'user' && pw == 'secret') {
+          deferred.resolve('Welcome ' + name + '!');
+        } else {
+          deferred.reject('Wrong credentials.');
+        }
+        promise.success = function(fn) {
+          promise.then(fn);
+          return promise;
+        }
+        promise.error = function(fn) {
+          promise.then(null, fn);
+          return promise;
+        }
+        return promise;
+      },
+      all: function(){
+        return ;
+      }
+
+    }
+  })
+
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
@@ -261,12 +290,12 @@ angular.module('starter.services', [])
       return pros;
     },
     remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
+      pros.splice(pros.indexOf(chat), 1);
     },
     get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+      for (var i = 0; i < pros.length; i++) {
+        if (pros[i].id === parseInt(chatId)) {
+          return pros[i];
         }
       }
       return null;
