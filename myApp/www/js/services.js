@@ -283,6 +283,7 @@ angular.module('starter.services', ['ngCordova'])
     trade: 'Manufacturing'
   }];
 
+
   function compare(a,b) {
     if (a.trade < b.trade)
       return -1;

@@ -62,7 +62,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       templateUrl: 'templates/proaccount.html',
       controller: 'DashCtrl'
     })
-    
+
 
   .state('tab.dash', {
     url: '/dash',
