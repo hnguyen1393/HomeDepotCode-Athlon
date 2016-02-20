@@ -19,7 +19,7 @@ angular.module('starter.controllers', ['ngCordova'])
   };
 })
 
-.controller('DashCtrl', function($scope, $ionicPopup, $state) {
+.controller('DashCtrl', function($scope, $ionicPopup, $state, $timeout) {
 
 // When button is clicked, the popup will be shown...
 
@@ -27,7 +27,9 @@ angular.module('starter.controllers', ['ngCordova'])
     $state.go('proaccount');
     var confirmPopup = $ionicPopup.confirm({
       title: 'Pro Decision',
-      template: 'Would you like to assist?'
+      template: 'Would you like to assist?',
+      cancelText: 'Decline',
+      okText: 'Accept'
 
     });
 
