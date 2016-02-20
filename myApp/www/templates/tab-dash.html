@@ -1,38 +1,40 @@
 <ion-view view-title="Home Depot">
+<ion-pane>
+  <ion-content class="has-header padding=true">
 
-  <ion-content class="padding">
-    <h2>Welcome</h2>
+
+
+    <h2 align="center">Top Pros for Home Depot</h2>
+
 
     <ion-slide-box on-slide-changed="slideChanged(index)">
       <ion-slide>
-        <h3>Thank you for choosing the Awesome App!</h3>
-        <div id="logo">
-          <img src="http://code.ionicframework.com/assets/img/app_icon.png">
+        <h3 align="center" ><font color="red">Plumber</font></h3>
+        <div class="container-fluid" id="plumb">
+          <a href="www.google.com">
+          <center><img align="center" src="http://www.sanjoseplumbingpro.com/media/images/cartoonplumber-350.png"></center>
+          </a>
         </div>
-        <p>
-          We've worked super hard to make you happy.
-        </p>
-        <p>
-          But if you are angry, too bad.
-        </p>
+        <br>
+        <br>
       </ion-slide>
-      <ion-slide>
-        <h3>Using Awesome</h3>
 
-        <div id="list">
-          <h5>Just three steps:</h5>
-          <ol>
-            <li>Be awesome</li>
-            <li>Stay awesome</li>
-            <li>There is no step 3</li>
-          </ol>
+      <ion-slide>
+        <h3 align="center" ><font color="orange">Electrician</font></h3>
+        <div class="container-fluid" id="elect">
+          <a href="www.google.com">
+            <center><img align="center" src="http://zen7method.com/neuxgen/electrician-man.png"></center>
+          </a>
         </div>
       </ion-slide>
+
       <ion-slide>
-        <h3>Any questions?</h3>
-        <p>
-          Too bad!
-        </p>
+        <h3 align="center" ><font color="blue">Home Improvement</font></h3>
+        <div class="container-fluid" id="homeImp">
+          <a href="www.google.com">
+            <center><img align="center" src="https://westbaycash.com/w2/img/uses/improve.png"></center>
+          </a>
+        </div>
       </ion-slide>
     </ion-slide-box>
 
@@ -40,4 +42,5 @@
 
 
   </ion-content>
+  </ion-pane>
 </ion-view>
