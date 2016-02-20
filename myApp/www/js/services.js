@@ -283,7 +283,6 @@ angular.module('starter.services', ['ngCordova'])
     trade: 'Manufacturing'
   }];
 
-
   function compare(a,b) {
     if (a.trade < b.trade)
       return -1;
@@ -292,7 +291,6 @@ angular.module('starter.services', ['ngCordova'])
     else
       return 0;
   }
-
 
   pros.sort(compare);
 
