@@ -4,44 +4,43 @@ angular.module('starter.services', [])
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var chats = [{
+  var customers = [{
     id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
+    name: 'Alex Shyu',
+    username: 'ashyu',
+    password: 'ashyu',
     face: 'img/ben.png'
   }, {
     id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
+    name: 'Chin Pyon',
+    username: 'cpyon',
+    password: 'cpyon',
     face: 'img/max.png'
   }, {
     id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
+    name: 'Lawrence Tsao',
+    username: 'ltsao',
+    password: 'ltsao',
     face: 'img/adam.jpg'
   }, {
     id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
+    name: 'Henry Nguyen',
+    username: 'hnguyen',
+    password: 'hnguyen',
     face: 'img/perry.png'
-  }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
   }];
 
   return {
     all: function() {
-      return chats;
+      return customers;
     },
     remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
+      customers.splice(customers.indexOf(chat), 1);
     },
     get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+      for (var i = 0; i < customers.length; i++) {
+        if (customers[i].id === parseInt(chatId)) {
+          return customers[i];
         }
       }
       return null;
