@@ -31,7 +31,9 @@ angular.module('starter.controllers', ['ngCordova'])
     var confirmPopup = $ionicPopup.confirm({
 
       title: 'Pro Decision',
-      template: 'Would you like to assist?'
+      template: 'Would you like to assist?',
+      cancelText: 'Decline',
+      okText: 'Accept'
 
     });
 
