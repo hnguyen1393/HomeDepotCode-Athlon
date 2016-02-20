@@ -1,6 +1,62 @@
 angular.module('starter.controllers', ['ngCordova'])
 
-.controller('DashCtrl', function($scope) {})
+.controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
+
+  // Called to navigate to the main app
+  $scope.startApp = function() {
+    $state.go('main');
+  };
+  $scope.next = function() {
+    $ionicSlideBoxDelegate.next();
+  };
+  $scope.previous = function() {
+    $ionicSlideBoxDelegate.previous();
+  };
+
+  // Called each time the slide changes
+  $scope.slideChanged = function(index) {
+    $scope.slideIndex = index;
+  };
+})
+
+.controller('DashCtrl', function($scope, $ionicPopup, $state) {
+
+// When button is clicked, the popup will be shown...
+
+  $scope.showConfirm = function() {
+    $state.go('proaccount');
+    var confirmPopup = $ionicPopup.confirm({
+      title: 'Pro Decision',
+      template: 'Would you like to assist?'
+
+    });
+
+    confirmPopup.then(function(res) {
+      if (res) {
+        $state.go('proaccount');
+        console.log('Sure!');
+      } else {
+        console.log('Not sure!');
+      }
+    });
+    };
+})
+
+  .controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
+    $scope.data = {};
+
+    $scope.login = function() {
+      LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
+        $state.go('tab.dash');
+      }).error(function(data) {
+        var alertPopup = $ionicPopup.alert({
+          title: 'Login failed!',
+          template: 'Please check your credentials!'
+        });
+      });
+    }
+
+  })
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
@@ -17,6 +73,8 @@ angular.module('starter.controllers', ['ngCordova'])
   };
 })
 
+
+
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })
@@ -28,7 +86,8 @@ angular.module('starter.controllers', ['ngCordova'])
 
   })
 .controller('dbController', function ($scope, $cordovaSQLite) {
-
   });
+
+
 
 
