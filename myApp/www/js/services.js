@@ -1,13 +1,12 @@
-angular.module('starter.services', [])
+angular.module('starter.services', ['ngCordova'])
 
   .service('LoginService', function($q, $cordovaSQLite) {
     return {
       loginUser: function(name, pw) {
         var deferred = $q.defer();
         var promise = deferred.promise;
-        var query = ""
 
-        if (name == 'user' && pw == 'secret') {
+        if (name =='user'&& pw =='secret') {
           deferred.resolve('Welcome ' + name + '!');
         } else {
           deferred.reject('Wrong credentials.');
@@ -21,13 +20,12 @@ angular.module('starter.services', [])
           return promise;
         }
         return promise;
-      },
-      all: function(){
-        return ;
       }
+
 
     }
   })
+
 
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
@@ -285,6 +283,7 @@ angular.module('starter.services', [])
     trade: 'Manufacturing'
   }];
 
+
   function compare(a,b) {
     if (a.trade < b.trade)
       return -1;
@@ -294,7 +293,10 @@ angular.module('starter.services', [])
       return 0;
   }
 
+
   pros.sort(compare);
+
+
 
   return {
     all: function() {
