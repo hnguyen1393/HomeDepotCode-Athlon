@@ -25,9 +25,15 @@ angular.module('starter.controllers', ['ngCordova'])
 
   $scope.showConfirm = function() {
     $state.go('proaccount');
+
+
+
     var confirmPopup = $ionicPopup.confirm({
+
       title: 'Pro Decision',
-      template: 'Would you like to assist?'
+      template: 'Would you like to assist?',
+      cancelText: 'Decline',
+      okText: 'Accept'
 
     });
 
