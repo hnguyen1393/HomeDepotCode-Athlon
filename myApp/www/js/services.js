@@ -285,6 +285,7 @@ angular.module('starter.services', [])
     trade: 'Manufacturing'
   }];
 
+
   function compare(a,b) {
     if (a.trade < b.trade)
       return -1;
@@ -294,7 +295,10 @@ angular.module('starter.services', [])
       return 0;
   }
 
+
   pros.sort(compare);
+
+
 
   return {
     all: function() {
